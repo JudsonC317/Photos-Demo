@@ -7,7 +7,7 @@ public class Photo {
     private String fileName;
 
     // TODO: raw data
-    
+
     public Photo() {
     }
 
