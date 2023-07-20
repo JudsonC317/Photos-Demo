@@ -1,9 +1,12 @@
 package com.example.photos.demo;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class Photo {
 
     private String id;
 
+    @NotEmpty
     private String fileName;
 
     // TODO: raw data
