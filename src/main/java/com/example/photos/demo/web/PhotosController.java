@@ -1,6 +1,7 @@
-package com.example.photos.demo;
+package com.example.photos.demo.web;
 
-import jakarta.validation.Valid;
+import com.example.photos.demo.model.Photo;
+import com.example.photos.demo.service.PhotosService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +14,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 @RestController
 public class PhotosController {

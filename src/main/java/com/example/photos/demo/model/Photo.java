@@ -1,4 +1,4 @@
-package com.example.photos.demo;
+package com.example.photos.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotEmpty;

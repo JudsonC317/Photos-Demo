@@ -1,5 +1,7 @@
-package com.example.photos.demo;
+package com.example.photos.demo.web;
 
+import com.example.photos.demo.model.Photo;
+import com.example.photos.demo.service.PhotosService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

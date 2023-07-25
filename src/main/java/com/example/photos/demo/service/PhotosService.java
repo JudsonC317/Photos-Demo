@@ -1,5 +1,6 @@
-package com.example.photos.demo;
+package com.example.photos.demo.service;
 
+import com.example.photos.demo.model.Photo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
