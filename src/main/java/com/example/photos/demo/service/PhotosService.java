@@ -1,30 +1,28 @@
 package com.example.photos.demo.service;
 
 import com.example.photos.demo.model.Photo;
-import com.example.photos.demo.repository.PhotosRepository;
+import com.example.photos.demo.DAO.PhotosDAO;
 import org.springframework.stereotype.Service;
-
-import java.util.UUID;
 
 @Service
 public class PhotosService {
 
-    private final PhotosRepository photosRepository;
+    private final PhotosDAO photosDAO;
 
-    public PhotosService(PhotosRepository photosRepository) {
-        this.photosRepository = photosRepository;
+    public PhotosService(PhotosDAO photosDAO) {
+        this.photosDAO = photosDAO;
     }
 
     public Iterable<Photo> get() {
-        return photosRepository.findAll();
+        return photosDAO.findAll();
     }
 
     public Photo get(Integer id) {
-        return photosRepository.findById(id).orElse(null);
+        return photosDAO.findById(id).orElse(null);
     }
 
     public void remove(Integer id) {
-        photosRepository.deleteById(id);
+        photosDAO.deleteById(id);
     }
 
     public Photo save(String fileName, String contentType, byte[] data) {
@@ -32,7 +30,7 @@ public class PhotosService {
         photo.setContentType(contentType);
         photo.setFileName(fileName);
         photo.setData(data);
-        photosRepository.save(photo);
+        photosDAO.save(photo);
         return photo;
     }
 }
